@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../images/background.jpg'); /* Replace with your actual image path */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Center the background image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: white; /* Optional: change text color for visibility */
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8); /* White background wcdith transparency */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Make it responsive */
+    max-width: 500px; /* Limit the maximum width */
+}
+
+h1 {
+    color: #333;
+}
+
+input[type="file"] {
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #28a745; /* Bootstrap's success color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838; /* Darken on hover */
+}
+
+#result {
+    margin-top: 20px;
+}
+
+#result-image {
+    display: block;
+    max-width: 100%; /* Make sure it scales properly */
+
+}
+
+#message {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ff0000; /* Red for error messages */
+}
