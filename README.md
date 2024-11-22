@@ -12,6 +12,11 @@ Intelligent Transportation Systems (ITS) by providing a tool that enhances road 
 and facilitates proactive road maintenance.
 
 The Files must arrange like this:
+Main Folder Contains app.py, uploads[folder], static[Folder], templates[Folder], runs[Folder]
+   Inside static folder - 2 folders : results and styles
+      result folder contains the image after detection
+      styles folder contains styles.css file
+   Inside templates folder - 2 files : index.html and result.html
 Pothole_Detection_Web/
 │
 ├── app.py                  # Flask backend file (main Python app)
