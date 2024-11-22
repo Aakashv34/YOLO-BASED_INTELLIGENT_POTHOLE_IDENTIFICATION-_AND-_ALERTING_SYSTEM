@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pothole Detection System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Pothole Detection System</h1>
+        <form id="upload-form" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*" required>
+            <button type="submit">Upload Image</button>
+        </form>
+        <div id="result"></div>
+        <img id="result-image" src="" alt="Detection Result" style="display: none;">
+        <div id="message"></div>
+    </div>
+
+    <script>
+        document.getElementById('upload-form').onsubmit = async function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            const response = await fetch('/predict', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                const result = await response.json();
+
+                // Display the image
+                const resultImage = document.getElementById('result-image');
+                resultImage.src = result.image_url;
+                resultImage.style.display = 'block';
+
+                // Display the message
+                const message = document.getElementById('message');
+                message.innerText = result.message;
+            } else {
+                const errorText = await response.text();
+                const message = document.getElementById('message');
+                message.innerText = "Error: " + errorText;
+            }
+        };
+    </script>
+</body>
+</html>
