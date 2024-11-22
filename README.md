@@ -17,15 +17,3 @@ Main Folder Contains app.py, uploads[folder], static[Folder], templates[Folder],
       result folder contains the image after detection
       styles folder contains styles.css file
    Inside templates folder - 2 files : index.html and result.html
-Pothole_Detection_Web/
-│
-├── app.py                  # Flask backend file (main Python app)
-├── uploads/                # Folder where uploaded images are stored
-├── static/                 # Folder for static files (results, images, CSS, JS)
-│   ├── results/            # Folder where processed (detection) images are saved
-│   └── styles/             # Optional folder for custom stylesheets (if needed)
-├── templates/              # Folder for HTML files
-│   ├── index.html          # HTML file for the home page (upload form)
-│   └── result.html         # HTML file for the result page (show detected image)
-└── runs/                   # YOLO will save the inference result in this folder (created by YOLO automatically)
-    └── detect/             # YOLO’s subdirectory for saving detections
