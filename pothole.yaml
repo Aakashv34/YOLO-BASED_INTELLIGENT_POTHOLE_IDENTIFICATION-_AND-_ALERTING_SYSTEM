@@ -1,0 +1,7 @@
+# pothole.yaml
+train: D:/Pothole/Pothole_Segmentation_YOLOv8/train/images
+val: D:/Pothole/Pothole_Segmentation_YOLOv8/valid/images
+test: D:/Pothole/Pothole_Segmentation_YOLOv8/test/images  # Add test folder if you want to test the model
+
+nc: 2  # Number of classes (for example: pothole and normal)
+names: ['normal', 'pothole']
